@@ -1,19 +1,19 @@
- int[] array={5,10,11,-7, 0};
-        int len=array.Length;
-        int max=0;
-        for (int j=0;j<len;j++)
+ int[] array={5,10,11,-7, 0};               //array of random numbers
+        int len=array.Length;               //find length of array
+        int max=0;                          //initialise number max
+        for (int j=0;j<len;j++)             //loop to check all numbers
         {
-            for (int i=j+1;i<len;i++)
+            for (int i=j+1;i<len;i++)       //loop to check next number
             {
-                if(array[j]>array[i])
+                if(array[j]>array[i])       //check if next number is greater than previous
                 {
-                    max=array[j];
-                    array[j]=array[i];
-                    array[i]=max;
+                    max=array[j];           //assign maximum value to variable max
+                    array[j]=array[i];      //place lesser value at previous position
+                    array[i]=max;           //place maximum value at later position
                 }
             }
         }
-        foreach(int n in array)
+        foreach(int n in array)            //loop to print all values of array
         {
-            Console.Write(n+" ");
+            Console.Write(n+" ");         
         }
