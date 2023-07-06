@@ -30,3 +30,19 @@ Console.Write("Enter number of lines required in pattern: ");
             }
             Console.WriteLine("");
         }
+
+Q20
+ string strI="ABCDEF";                        //first string input
+        string strII="AEBJDE";                //second string input
+        int lenI=strI.Length;                 //length of first string
+        int lenII=strII.Length;               //length of second string
+        for (int i=0;i<lenI;i++)              //loop to check each character of first string
+        {
+            for (int j=i;j<lenII;j++)         //loop check characters second string
+            {
+                if(strI[i]==strII[j])          //comparison
+                {
+                    Console.Write(strI[i]);    //Printing in Console
+                }
+            }
+        }
