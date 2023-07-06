@@ -1,4 +1,5 @@
- int[] array={5,10,11,-7, 0};               //array of random numbers
+Q17
+int[] array={5,10,11,-7, 0};               //array of random numbers
         int len=array.Length;               //find length of array
         int max=0;                          //initialise number max
         for (int j=0;j<len;j++)             //loop to check all numbers
@@ -16,4 +17,16 @@
         foreach(int n in array)            //loop to print all values of array
         {
             Console.Write(n+" ");         
+        }
+
+Q19
+Console.Write("Enter number of lines required in pattern: ");
+        int n=Convert.ToInt32(Console.ReadLine());
+        for (int i=0;i<=n;i++)
+        {
+            for (int j=1;j<=i;j++)
+            {
+                Console.Write(j);
+            }
+            Console.WriteLine("");
         }
