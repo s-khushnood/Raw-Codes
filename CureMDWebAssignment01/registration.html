@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            background-color: rgb(108, 54, 196);
+        }
+
+        .main {
+            display: flex;
+            gap: 30px;
+        }
+
+        form {
+            width: 30%;
+            border: solid;
+            display: flex;
+            flex-direction: column;
+            padding: 2% 2%;
+            justify-content: center;
+            border-radius: 70px;
+            background: linear-gradient(rgb(242, 99, 247), rgb(119, 9, 245));
+            color: aliceblue;
+        }
+
+        form input {
+            padding: 10px 0px 10px 5px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        form label {
+            padding: 10px 2px;
+            font-size: 20px;
+        }
+
+        .button {
+            padding: 5px 10px;
+            float: right;
+            padding: 10px 20px;
+            background: none;
+            border: solid 2px aliceblue;
+            font-size: 20px;
+            color: aliceblue;
+        }
+        .button:hover{
+            background-color:rgb(242, 99, 247);
+            cursor: pointer;
+        }
+
+        table{
+            width: 100%;
+        }
+        table, th, td,tr{
+            border: solid 1px aliceblue;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        th{
+            background-color:navy;
+            color: aliceblue;
+        }
+        td{
+            background-color: cadetblue;
+        }
+        th:hover{
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form onsubmit="formValidation(event)" id="form">
+            <h1>Registration Form</h1>
+            <label>First Name</label>
+            <input placeholder="First Name"  id="name"/>
+
+
+            <label>Last Name</label>
+            <input placeholder="Last Name" />
+
+            <label for="email">Email</label>
+            <input placeholder="Email"  id="email" />
+
+            <label>Phone Number</label>
+            <input placeholder="000-000-000" id="number" />
+
+            <p style="font-size: 20px;">Select Gender:</p>
+            <div>
+                <input value="male" type="radio" name="gender" />
+                <label for="male">Male</label>
+                <input value="female" type="radio" name="gender" />
+                <label for="female">Female</label>
+            </div>
+
+            <div style="padding-top: 10px;">
+                <input type="checkbox">
+                <label>Agree with terms & conditions</label>
+            </div>
+
+            <div style="padding-top:20px;">
+                <input type="submit"class="button">
+            </div>
+        </form>
+        <div style="width: 80%; text-align: center;">
+            <h1>Record</h1>
+            <table id="recordTable">
+                <tr>
+                    <th onclick="sortById()">Sr. No.</th>
+                    <th onclick="sortByName()">Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+<script src="registration.js"></script>
+</body>
+
+</html>

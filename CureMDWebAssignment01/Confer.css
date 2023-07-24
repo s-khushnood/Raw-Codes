@@ -1,0 +1,532 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+.container1 {
+  background-image: linear-gradient(rgba(4, 0, 7, 0.5), rgba(8, 8, 8, 0.7)),
+    url(bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-bottom: 7%;
+}
+navbar {
+  display: flex;
+  background-color: rgba(4, 0, 7, 0.3);
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.logo {
+  display: flex;
+  padding-left: 5%;
+  gap: 5px;
+}
+.fa-angle-double-right {
+  color: rgb(152, 5, 250);
+}
+.logo h2 {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 11%;
+}
+
+.menuBar {
+  display: flex;
+  list-style: none;
+  color: aliceblue;
+  width: 50%;
+  justify-content: space-evenly;
+  margin: 0;
+  position: absolute;
+  padding-left: 22%;
+}
+.menuBar li {
+  padding: 16px 25px;
+}
+.dropDown-content {
+  display: none;
+  position: absolute;
+  margin-top: 15px;
+  color: aliceblue;
+  z-index: 1;
+}
+.dropDown:hover .dropDown-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 200px;
+  background-color: rgba(4, 0, 7, 0.3);
+  justify-content: space-evenly;
+  list-style: none;
+}
+.dropDown-content ul:hover {
+  background-color: rgba(146, 143, 148, 0.3);
+  cursor: pointer;
+}
+.searchBar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-right: 5%;
+  gap: 5px;
+}
+.searchBar input {
+  border: none;
+  border-radius: 15px 0px 0px 15px;
+  height: 70%;
+  padding-left: 5%;
+  font-size: medium;
+  background-color: rgba(146, 143, 148, 0.3);
+  color: aliceblue;
+  display: none;
+  transition: display 0.4s ease-in-out;
+}
+.searchBar input::placeholder {
+  color: aliceblue;
+}
+.fa-search {
+  color: aliceblue;
+}
+.searchBar:hover input {
+  display: block;
+  cursor: pointer;
+}
+.fa-search:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+.iconContainer {
+  display: none;
+}
+.menuIcon {
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px aliceblue;
+  margin-right: 40px;
+}
+.fa-bars {
+  color: aliceblue;
+}
+.iconDropDown {
+  display: block;
+  color: aliceblue;
+  list-style: none;
+  background-color: rgba(146, 143, 148, 0.3);
+  position: absolute;
+  margin: 0 -87px;
+  padding: 0px;
+  z-index: 1;
+  display: none;
+}
+.menuIcon:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+.iconDropDown li {
+  padding: 5px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.iconDropDown li:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 10%;
+  padding-top: 10%;
+}
+.info h1,
+h3 {
+  color: aliceblue;
+  float: right;
+}
+.info h1 {
+  font-size: 50px;
+}
+.location h3 {
+  font-size: 30px;
+  font-weight: 100;
+}
+.Btn {
+  background: linear-gradient(rgb(214, 11, 214), rgb(153, 4, 253));
+  color: aliceblue;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+}
+.Btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.container2 {
+  background-color: #151853;
+  padding-bottom: 5%;
+}
+.descriptionContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+.description {
+  width: 40%;
+  padding-right: 5%;
+}
+
+.description h4 {
+  color: rgb(214, 11, 214);
+  font-size: medium;
+  padding-bottom: 5px;
+  border-bottom: solid 2px gray;
+  width: 47%;
+  letter-spacing: 1px;
+}
+
+.description h1,
+p {
+  color: aliceblue;
+}
+.description h1 {
+  line-height: 40px;
+}
+.description p {
+  font-size: 18px;
+  line-height: 30px;
+}
+.descriptionContainer img {
+  width: 30%;
+}
+
+.conferenceDate {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  align-items: center;
+}
+.dateDesc {
+  width: 20%;
+  line-height: 26px;
+}
+.dateDesc h5 {
+  color: rgb(214, 11, 214);
+}
+.dateDesc h3 {
+  padding-top: 10px;
+}
+.dateDesc h5,
+h3 {
+  margin: 0;
+}
+.dateDesc h3,
+.date h2 {
+  color: aliceblue;
+}
+.date h2 {
+  font-size: 50px;
+  margin: 0;
+}
+.date p {
+  color: rgba(183, 179, 185, 0.5);
+  font-size: 15px;
+  margin: 0;
+}
+.date {
+  border: solid 1px rgba(183, 179, 185, 0.5);
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 5px;
+}
+.dateContainer {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container3 {
+  background: linear-gradient(rgb(132, 7, 250), rgb(247, 3, 234));
+  text-align: center;
+}
+.container3 h2,
+p,
+.speakerDesc h4 {
+  color: aliceblue;
+}
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5%;
+  gap: 2%;
+}
+.speakerDesc p {
+  color: rgb(190, 3, 247);
+}
+.speakerDesc h4 {
+  margin-bottom: 0;
+}
+.speakerCard {
+  position: relative;
+  background-image: linear-gradient(
+      rgba(248, 244, 244, 0),
+      rgba(10, 10, 10, 0.9)
+    ),
+    url("speaker.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30%;
+  max-height: 360px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.speakerDesc {
+  padding-top: 12em;
+  /* padding-top: 65%; */
+  text-align: left;
+  font-size: 20px;
+  padding-left: 10%;
+}
+.allSpeakersBtn {
+  padding: 5%;
+}
+.allSpeakersBtn button {
+  color: aliceblue;
+  background: none;
+  padding: 10px 20px;
+  border: solid 1px aliceblue;
+  font-size: 15px;
+  border-radius: 20px;
+}
+.allSpeakersBtn button:hover {
+  color: black;
+  background-color: rgb(190, 3, 247);
+  cursor: pointer;
+}
+.container4 {
+  background-color: #151853;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container4 h4 {
+  color: rgb(190, 3, 247);
+  padding-top: 30px;
+}
+.container4 h2 {
+  color: aliceblue;
+  margin-top: 0px;
+}
+
+.container4 table {
+  color: aliceblue;
+  width: 80%;
+}
+
+.container4 table,
+tr,
+th,
+td {
+  border: solid 1px;
+  border-collapse: collapse;
+}
+.container4 th {
+  background-color: rgb(132, 7, 250);
+}
+.container4 th {
+  padding: 1%;
+}
+.container4 td {
+  padding: 2%;
+}
+.container4 tr:nth-child(even) {
+  background-color: rgb(214, 11, 214);
+}
+.container4 tr:nth-child(odd) {
+  background-color: royalblue;
+}
+.container4 tr a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.container4 tr:hover {
+  background-color: rgb(2, 39, 252);
+  cursor: pointer;
+}
+
+.container5 {
+  background: #c63fa4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+.partnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.container5 h4 {
+  color: #151853;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+.container5 h3 {
+  float: none;
+  font-size: 30px;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+}
+.container5 button{
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: rgb(199, 147, 233);
+}
+.container5 button:hover{
+  cursor: pointer;
+  color: rgba(132, 7, 250,0.5);
+}
+.leftArrow {
+  position: absolute;
+  left: 0;
+}
+.rightArrow {
+  position: absolute;
+  right: 0;
+}
+.slideShow {
+  display: flex;
+  justify-content: center;
+  padding-top: 25%;
+}
+.slide {
+  max-width: 70%;
+  max-height: 500px;
+}
+.container6 {
+  background-color: #151853;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.container6 h4 {
+  color: rgb(190, 3, 247);
+}
+.container6 h2 {
+  color: aliceblue;
+  font-size: 45px;
+  margin-top: 0;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.contact {
+  text-align: left;
+}
+.contact h3 {
+  padding-bottom: 5%;
+  float: none;
+}
+.contact p {
+  color: rgb(199, 147, 233);
+}
+.messageContainer {
+  background-color: rgba(95, 92, 122, 0.2);
+  border-radius: 10px;
+  width: 50%;
+}
+.messageContainer input,
+.messageContainer textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 1px aliceblue;
+  padding: 6% 0px 1% 0%;
+  width: 45%;
+  font-size: 17px;
+  margin-left: 13px;
+  color: aliceblue;
+}
+
+.messageContainer textarea {
+  width: 93%;
+}
+.messageContainer input, .messageContainer textarea ::placeholder{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.MessageBtn {
+  background: linear-gradient(rgb(214, 11, 214), rgb(153, 4, 253));
+  color: aliceblue;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+  float: left;
+}
+
+.MessageBtn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #111343;
+}
+.footerContainer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.footerContainerDiv {
+  width: 20%;
+}
+.socialMedia {
+  display: flex;
+  gap: 10px;
+}
+.socialCircle {
+  border: solid 1px rgba(95, 92, 122, 0.5);
+  padding: 5px 10px;
+  border-radius: 16px;
+  color: aliceblue;
+}
+.footerContactDetail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9293bc;
+}
+.footerContact h3,
+.workShops h3 {
+  float: none;
+  font-size: 1.5em;
+  padding-top: 4%;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer p {
+  color: #9293bc;
+}
+.line {
+  width: 80%;
+  border-top: 1px solid #9293bc;
+  padding-left: 2%;
+}
+
